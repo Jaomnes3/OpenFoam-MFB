@@ -15,11 +15,17 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-continuousPhaseName air;
-
-rho.air         1.2;
+continuousPhaseName water;
 
 transportModel  Newtonian;
-nu              1e-05;
+nu              1e-06;
+rho.air		1000;
+
+//Surface tension coefficients
+sigma12		0.05;
+sigma13		004;
+
+//Diffusivity between miscible phases
+D23		3e-09;
 
 // ************************************************************************* //
