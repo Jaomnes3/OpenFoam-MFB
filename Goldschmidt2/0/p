@@ -27,24 +27,21 @@ boundaryField
         value           $internalField;
     }
 
-    walls
+    atmosphere
     {
         type            fixedFluxPressure;
         phi             phi.air;
         value           $internalField;
     }
 
-    atmosphere
+    walls
     {
         type            fixedValue;
         phi             phi.air;
         value           $internalField;
     }
 
-//    frontAndBack
-//    {
-//        type            symmetry;
-//    }
+
 }
 
 // ************************************************************************* //

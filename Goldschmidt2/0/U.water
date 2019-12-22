@@ -10,23 +10,42 @@ FoamFile
     version     2.0;
     format      ascii;
     class       dictionary;
-    location    "constant";
-    object      transportProperties;
+    location    "0";
+    object      U.water;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-continuousPhaseName water;
+dimensions      [0 1 -1 0 0 0 0];
 
-transportModel  Newtonian;
-nu              1e-06;
-rho.air		1000;
-rho.water       1000;
+internalField   uniform (0 0 0);
 
-//Surface tension coefficients
-sigma12		0.05;
-sigma13		004;
+boundaryField
+{
+    sides
+    {
+        type            noSlip;
+    }
 
-//Diffusivity between miscible phases
-D23		3e-09;
+    atmosphere
+    {
+        type            pressureInletOutletVelocity;
+        phi             phi.air;
+        inletValue      uniform (0 0 0);
+        value           uniform (0 0 0);
+    }
+
+    walls
+    {
+        type            interstitialInletVelocity;
+        inletVelocity   uniform (0 0 1.875);
+        value           uniform (0 0 1.875);
+        phi             phi.air;
+        alpha           alpha.air;
+    }
+
+
+}
+
 
 // ************************************************************************* //
+
