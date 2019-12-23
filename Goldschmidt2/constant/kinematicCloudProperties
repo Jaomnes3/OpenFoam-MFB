@@ -101,13 +101,7 @@ subModels
     {
         patches
         (
-            top
-            {
-                type rebound;
-                e    0.97;
-                mu   0.09;
-            }
-            bottom
+            atmosphere
             {
                 type rebound;
                 e    0.97;
@@ -119,7 +113,7 @@ subModels
                 e    0.97;
                 mu   0.09;
             }
-            frontAndBack
+            sides
             {
                 type rebound;
                 e    0.97;
