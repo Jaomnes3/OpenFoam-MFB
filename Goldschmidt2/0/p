@@ -23,21 +23,21 @@ boundaryField
     sides
     {
         type            fixedFluxPressure;
-        phi             phi.air;
+        phi             phi.water;
         value           $internalField;
     }
 
     atmosphere
     {
         type            fixedFluxPressure;
-        phi             phi.air;
+        phi             phi.water;
         value           $internalField;
     }
 
     walls
     {
         type            fixedValue;
-        phi             phi.air;
+        phi             phi.water;
         value           $internalField;
     }
 

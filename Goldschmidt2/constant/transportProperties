@@ -19,7 +19,6 @@ continuousPhaseName water;
 
 transportModel  Newtonian;
 nu              1e-06;
-rho.air		1000;
 rho.water       1000;
 
 //Surface tension coefficients

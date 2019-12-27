@@ -33,7 +33,7 @@ solvers
         smoother        GaussSeidel;
     }
 
-    "(U.air|k|omega)"
+    "(U.water|k.water|omega.water)"
     {
         solver          smoothSolver;
         smoother        symGaussSeidel;
@@ -41,7 +41,7 @@ solvers
         relTol          0.1;
     }
 
-    "(U.air|k|omega)Final"
+    "(U.water|k.water|omega.water)Final"
     {
         solver          smoothSolver;
         smoother        symGaussSeidel;
