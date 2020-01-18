@@ -37,8 +37,8 @@ boundaryField
     walls
     {
         type            interstitialInletVelocity;
-        inletVelocity   uniform (0 0 0.002);
-        value           uniform (0 0 0.002);
+        inletVelocity   uniform (0 0 1.875);
+        value           uniform (0 0 1.875);
         phi             phi.water;
         alpha           alpha.water;
     }
